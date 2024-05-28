@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio</title>
+    <link rel="stylesheet" type="text/css" th:href="@{/css/estilosindex.css}">
+    <script th:src="@{/js/mainindex.js}"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+</head>
+<body style="background-color: #F9F7EE;">
+    <!--barra de navegacion-->
+    <div class="navbar-container">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#F8F0E3;">
+            <div class="container-fluid">
+                <a class="navbar-brand" th:href="@{/index}">SkinZen</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/index}">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/productos}">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" th:href="@{/sobre}">Sobre Nosotros</a>
+                        </li>  
+                    </ul> 
+                    
+                    <form th:action="@{/logout}" method="post">
+               			 <input class="botton-close" type="submit" value="Cerrar Sesión"/>
+           			 
+    </div>
+                    <div class="icon-container">
+                        <a th:href="@{/login}">
+                            <span class="icon">
+                            <i class="bi bi-person"></i>
+                            </span>
+                        </a>
+                        <span class="icon cart-icon" data-bs-toggle="offcanvas" data-bs-target="#carrito" aria-controls="carrito">
+                            <i class="bi bi-cart2"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <!--final de la barra de navegacion-->
+    <!--inicio carrusel-->
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="image-container">
+                    <img src="sources/towel.webp" class="d-block w-100 img-fluid" style="max-height: 500px; object-fit: cover" alt="Towel Image">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-container">
+                    <img src="sources/to.1.webp" class="d-block w-100 img-fluid" style=" max-height: 500px; object-fit: cover" alt="To.1 Image">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="image-container">
+                    <img src="sources/too.jpg" class="d-block w-100 img-fluid" style="max-height: 500px; object-fit: cover" alt="Too Image">
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <br>
+    <!-- Inicio del container -->
+    <div class="container">
+        <h2>Más Vendidos</h2>
+        <div class="row">
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="sources/p1.jpg" class="card-img-top img-fluid" style="max-height: 290px; width: auto;" alt="producto 8">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Crema Hidratante Dynasty</h5>
+                        <p class="card-text">Precio: $80.000</p>
+                        <button class="btn btn-beige mt-auto">Lo Quiero</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="sources/p2.jpg" class="card-img-top img-fluid"  style="max-height: 290px; width: auto;" alt="producto 5">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Matte Sun Stick : Mugwort+Camelia (SPF 50+ PA+++)</h5>
+                        <p class="card-text">Precio: $72.000</p>
+                        <button class="btn btn-beige mt-auto">Lo Quiero</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="sources/p3.jpg" class="card-img-top img-fluid" style="max-height: 290px; width: auto;" alt="producto 2">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Suero Calming: Te Verde + Panthenol</h5>
+                        <p class="card-text">Precio: $68.000</p>
+                        <button class="btn btn-beige mt-auto">Lo Quiero</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card h-100">
+                    <img src="sources/p4.jpg" class="card-img-top img-fluid" style="max-height: 290px; width: auto;" alt="producto 10">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title">Suero de Niacinamida The Ordinary</h5>
+                        <p class="card-text">Precio: $82.000</p>
+                        <button class="btn btn-beige mt-auto">Lo Quiero</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    
+   <!--etiqueta-->
+   <div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-12">
+            <div class="hero-banner">
+                <div class="row align-items-center">
+                    <div class="col-md-6 order-md-2">
+                        <img src="sources/c1.webp" class="img-fluid" alt="Mujer">
+                    </div>
+                    <div class="col-md-6 order-md-1 my-auto">
+                        <p class="hero-text">SkinZen - Nunca es tarde para empezar a cuidar tu piel.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--text-->
+<div class="quote-box">
+    <blockquote>
+        <p>“Nature gives you the face you have at twenty; it is up to you to merit the face you have at fifty.”</p>
+        <footer>Coco Chanel</footer>
+    </blockquote>
+</div>
+<br>
+<!--image-->
+<div class="custom-container">
+    <div class="custom-image-overlay">
+        <nav class="custom-menu">
+            <a href="#">Protector Solar</a>
+            <a href="#">Limpiador</a>
+            <a href="#">Tonico</a>
+            <a href="#">Serum</a>
+            <a href="#">Exfoliador</a>
+        </nav>
+    </div>
+    <div class="custom-footer">
+        DESEAMOS SINCERAMENTE PROPORCIONARLE ALIVIO A SU PIEL Y BRINDARLE UNA VIDA MÁS SALUDABLE Y SERENA.
+    </div>
+</div>
+
+<!--footer-->
+<footer class="text-white py-5" style="background-color: #9F9D91;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-6 mb-4">
+                <h5>Enlaces</h5>
+                <ul class="list-unstyled">
+                    <li><a th:href="@{/index}" class="text-white">Inicio</a></li>
+                    <li><a th:href="@{/productos}" class="text-white">Productos</a></li>
+                    <li><a th:href="@{/sobre}" class="text-white">Sobre Nosotros</a></li>
+                    <p style="color:white;">Tu rol es: <span th:text="${rol}"></span></p>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <h5>Nuestra info</h5>
+                <p>serviciocliente@gmail.com</p>
+                <p>(601) 580 0330</p>
+                <p>324 556 0107</p>
+                <h5>Síguenos</h5>
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href="https://www.facebook.com/?locale=es_LA"><i class="bi bi-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.instagram.com/"><i class="bi bi-instagram"></i></a></li>
+                    <li class="list-inline-item"><a href="https://twitter.com/?lang=es"><i class="bi bi-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href="https://www.whatsapp.com/?lang=es_LA"><i class="bi bi-whatsapp"></i></a></li>
+                </ul>
+            </div>
+            <div class="col-md-4 col-sm-6 mb-4">
+                <h5>SkinZen</h5>
+                <p>SkinZen no solo se trata de cuidado de la piel; es un viaje que honra tu autenticidad. Unimos lo clásico con lo contemporáneo para ofrecerte lo más excepcional en el cuidado personal. Con nosotros, cada momento es una ocasión para explorar y expresar tu verdadero ser.</p>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <hr> <!-- Línea horizontal -->
+        <p class="text-center">Página web diseñada por Laura Valentina López Córdoba</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>    
+</body>
+</html>
